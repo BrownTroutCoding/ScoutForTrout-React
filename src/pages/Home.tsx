@@ -236,7 +236,7 @@ function Home() {
           </div>
 
           {/* shields River Div */}
-          <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70 mb-5">
+          <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
               <h2 className="text-slate-100 text-lg mb-2 text-center">Shields River</h2>
               <RiverCFS river_name='shields' onFetchCfs={setShieldsCfsMessage} />
 

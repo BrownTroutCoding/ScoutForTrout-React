@@ -48,16 +48,21 @@ function Home() {
 
         {/* river conditions div */}
 
-        <h2 className="text-center text-1xl mb-5 sm:p-2 text-slate-100 rounded-lg border bg-black bg-opacity-70">
+        <h2 className="text-center text-2xl my-2 sm:p-5 text-slate-100 rounded-lg border bg-black bg-opacity-70">
           Quick reference river conditions
         </h2>
+        <h3 className="text-center text-1xl sm:p-3 mb-2 text-slate-100 rounded-lg border bg-black bg-opacity-70">
+          Please be patient while data loads after requesting, it can take a couple minutes.
+        </h3>
+
         <div
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-5'>
+          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-10'>
 
 
           {/* Gallatin River Div */}
             <div className="p-5 sm:p-5 text-slate-200 rounded-lg border bg-black bg-opacity-70">
-              <h2 className="text-slate-100 text-lg mb-2 text-center">Gallatin River</h2>
+              <h2 className="text-slate-100 text-lg text-center">Gallatin River</h2>
+              <h3 className="text-slate-100 text-sm mb-2 text-center">(Gallatin Gateway)</h3>
               {/* <img
                 className='mb-2'
                 src={gallatinImage}
@@ -85,7 +90,8 @@ function Home() {
 
           {/* Madison River Div */}
           <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
-            <h2 className="text-slate-100 text-lg mb-2 text-center">Madison River</h2>
+            <h2 className="text-slate-100 text-lg text-center">Madison River</h2>
+            <h3 className="text-slate-100 text-sm mb-2 text-center">(N of Ennis Lake)</h3>
             <RiverCFS river_name='madison' onFetchCfs={setMadisonCfsMessage} />
             <RiverTemp river_name='madison' onFetchTemp={setMadisonTempMessage} />
 
@@ -123,7 +129,8 @@ function Home() {
 
           {/* Jefferson River Div */}
           <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
-            <h2 className="text-slate-100 text-1xl mb-2 text-center ">Jefferson River</h2>
+            <h2 className="text-slate-100 text-1xl text-center ">Jefferson River</h2>
+            <h3 className="text-slate-100 text-sm mb-2 text-center">(Three Forks)</h3>
             <RiverCFS river_name='jefferson' onFetchCfs={setJeffersonCfsMessage} />
             <RiverTemp river_name='jefferson' onFetchTemp={setJeffersonTempMessage} />
 
@@ -161,7 +168,8 @@ function Home() {
 
           {/* Yellowstone River Div */}
           <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
-            <h2 className="text-slate-100 text-lg mb-2 text-center">Yellowstone River</h2>
+            <h2 className="text-slate-100 text-lg text-center">Yellowstone River</h2>
+            <h3 className="text-slate-100 text-sm mb-2 text-center">(S of Livingston)</h3>
             <RiverCFS river_name='yellowstone' onFetchCfs={setYellowstoneCfsMessage} />
             <RiverTemp river_name='yellowstone' onFetchTemp={setYellowstoneTempMessage} />
 
@@ -199,7 +207,8 @@ function Home() {
 
           {/* Missouri River Div */}
           <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
-            <h2 className="text-slate-100 text-lg mb-2 text-center">Missouri River</h2>
+            <h2 className="text-slate-100 text-lg text-center">Missouri River</h2>
+            <h3 className="text-slate-100 text-sm mb-2 text-center">(Toston)</h3>
             <RiverCFS river_name='missouri' onFetchCfs={setMissouriCfsMessage} />
             <RiverTemp river_name='missouri' onFetchTemp={setMissouriTempMessage} />
 
@@ -237,7 +246,8 @@ function Home() {
 
           {/* shields River Div */}
           <div className="p-5 sm:p-5 text-slate-200 rounded-lg text-4x1 border bg-black bg-opacity-70">
-              <h2 className="text-slate-100 text-lg mb-2 text-center">Shields River</h2>
+              <h2 className="text-slate-100 text-lg text-center">Shields River</h2>
+              <h3 className="text-slate-100 text-sm mb-2 text-center">(N of Livingston)</h3>
               <RiverCFS river_name='shields' onFetchCfs={setShieldsCfsMessage} />
 
               {shieldsCfsMessage && (
@@ -255,11 +265,10 @@ function Home() {
                   </div>
                 </div>
               )}
-            </div>          
+            </div>
+
+          
         </div>
-        <h3 className="text-center text-1xl sm:p-3 mb-10 text-slate-100 rounded-lg border bg-black bg-opacity-70">
-          Cubic Feet Per Second (CFS) represents the volume of water in a river.
-        </h3>
       </div>
     </div>
   )

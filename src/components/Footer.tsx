@@ -5,11 +5,16 @@ const Footer = () => {
     <footer className='flex items-center justify-between flex-wrap bg-gray-500 p-3'>
       <p className='font-semibold text-sm tracking-tight text-gray-200'
       >
-        Website made by Brown Trout Coding
+        Website made by Brown Trout Coding.
     </p>
-      <p className='font-semibold text-sm tracking-tight text-gray-200'
+    <p className='font-semibold text-sm tracking-tight text-gray-200'
       >
-        Contact: Browntroutcoding@gmail.com</p>
+        This website is a work in progress.
+    </p>
+    <p className='font-semibold text-sm tracking-tight text-gray-200'
+    >
+      Contact: Browntroutcoding@gmail.com
+    </p>
     </footer>
   );
 };

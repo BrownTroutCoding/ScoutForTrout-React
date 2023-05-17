@@ -48,11 +48,11 @@ function Home() {
 
         {/* river conditions div */}
 
-        <h2 className="text-center text-2xl my-5 sm:p-5 text-slate-100 rounded-lg border bg-black bg-opacity-70 mb-5">
-              Quick reference river conditions
-            </h2>
+        <h2 className="text-center text-1xl mb-5 sm:p-2 text-slate-100 rounded-lg border bg-black bg-opacity-70">
+          Quick reference river conditions
+        </h2>
         <div
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
+          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-5'>
 
 
           {/* Gallatin River Div */}
@@ -255,10 +255,11 @@ function Home() {
                   </div>
                 </div>
               )}
-            </div>
-
-          
+            </div>          
         </div>
+        <h3 className="text-center text-1xl sm:p-3 mb-10 text-slate-100 rounded-lg border bg-black bg-opacity-70">
+          Cubic Feet Per Second (CFS) represents the volume of water in a river.
+        </h3>
       </div>
     </div>
   )

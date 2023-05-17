@@ -15,7 +15,10 @@ const AuthChecker = ({ children }: Props) => {
     // function for firebase, checking if user auth has changed
     const auth_state = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        signInWithGoogle(() => navigate('/Dashboard')); // Call the imported signIn function
+        signInWithGoogle(() => {
+          navigate('/Dashboard')
+          window.location.reload();
+        }); // Call the imported signIn function
       }
     });
     return () => auth_state();

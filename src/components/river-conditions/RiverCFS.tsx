@@ -5,12 +5,19 @@ import Button from "@mui/material/Button";
 function RiverCFS({ river_name, onFetchCfs }: { river_name: string, onFetchCfs: (message: string) => void }) {
   const [ cfsData, setCfsData ] = useState(null);
   const [ cfsMessage, setCfsMessage ] = useState('');
+  const [ isLoading, setIsLoading ] = useState(false);
 
   const handleButtonClick = () => {
+    setIsLoading(true);
     fetchCFS(river_name)
       .then(data => {
+        setIsLoading(false);
         // ...
         onFetchCfs(`Current CFS: ${data.cfs}`);
+      })
+      .catch(error => {
+        setIsLoading(false);
+        console.error(error);
       });
   };
   
@@ -23,6 +30,9 @@ function RiverCFS({ river_name, onFetchCfs }: { river_name: string, onFetchCfs: 
       >
         Get CFS
       </Button>
+      {isLoading && (
+        <p>Loading...</p>
+      )}
       {cfsMessage && (
         <div className='modal'>
           <div className='modal-content'>

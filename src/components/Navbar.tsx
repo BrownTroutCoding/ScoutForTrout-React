@@ -28,25 +28,23 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-gray-500 p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Link to="/" className="font-semibold text-xl tracking-tight text-gray-200">
-          Scout for Trout
-        </Link>
-      </div>
-      <div className="block">
-        <button
-          onClick={dropDown}
-          className="flex items-center px-3 py-2 text-gray-200 border rounded border-gray-400
-           hover:text-white hover:border-white"
-        >
-          <i className="fa-solid fa-bars"></i>
-        </button>
-      </div>
-      {isVisible ? (
-        <div className="w-full block flex-grow items-center">
-
-          <div className="space-x-4 mt-4 flex">
+    <nav className="flex items-center justify-between flex-wrap bg-gray-500 p-6 relative"> {/* Removed overflow-hidden */}
+        <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <Link to="/" className="font-semibold text-xl tracking-tight text-gray-200">
+                Scout for Trout
+            </Link>
+        </div>
+        <div className="block z-20">
+            <button
+                onClick={dropDown}
+                className="flex items-center px-3 py-2 text-gray-200 border rounded border-gray-400
+                hover:text-white hover:border-white"
+            >
+                <i className="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        {isVisible ? (
+            <div className="flex flex-col space-y-4 absolute top-0 right-0 mt-12 bg-gray-500 p-4 rounded z-10 max-w-md">
           <Link
             to="/"
             onClick={clicked}
@@ -104,7 +102,6 @@ function Navbar() {
               Sign Out
             </Button>
           )}
-        </div>
         </div>
       ) : (
         <></>
